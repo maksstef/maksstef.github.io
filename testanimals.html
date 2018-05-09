@@ -1,0 +1,190 @@
+<!DOCTYPE HTML5>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+<title>Tests</title>
+<body>
+  <header>
+    <div class="headerlogo">
+      <p><a href="index.html">MaksStef</a></p>
+    </div>
+    <nav>
+      <div class="topnav" id="mytopnav">
+        <a href="index.html">HOME</a>
+        <a href="#">ABOUT</a>
+        <a href="tests.html">TESTS</a>
+        <a href="#">PORTFOLIO</a>
+        <a href="#">TESTIMONIALS</a>
+        <a href="#">CONTACT</a>
+        <a href="#" id="menu" class="icon">&#9776;</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <title>Тесты</title>
+    <style>
+    @font-face {font-family:dcp;src: url('dcp.ttf');}
+    body{background-color: black;background-size: 100%;font-family:dcp;color: white;}
+
+    #option1,#option2,#option3,#option4{
+    	display:none;
+    	margin-bottom: 10px;
+    }
+    a {
+    	 color: black; /* Цвет обычной ссылки */
+    	 text-decoration: none; /* Убираем подчеркивание у ссылок */
+    	}
+    	a:hover {
+    	 color: white; /* Цвет ссылки при наведении на нее курсора мыши */
+    	 text-decoration: none; /* Добавляем подчеркивание */
+    	}
+    .centertest{
+      margin: 100px 0 0 0 ;
+    }
+    .ss{font-size: 40px;}
+    /*//////////////////////////////////////////////////////////////////////////////////*/
+    .teststyle{
+        text-decoration: none;
+        border-radius: 7px;
+        padding: 2px 5px 2px 5px;
+        font-size: 20px;
+        color: white;
+        background: #fcad45;
+      	border: 0;
+      	cursor: pointer;}/*Устанавливает форму курсора, когда он находится в пределах элемента. Вид курсора зависит от операционной системы и установленных параметров.*/
+    </style>
+
+    </head>
+    <body>
+    	<center class="centertest">
+        <div class="ss">
+          Тест "Животные"
+        </div>
+    		<p style="font-size: 38px;font-weight: bold;padding-top: 2px;" id="time">Затрачено времени: 0 сек</p>
+    		<p style="font-size: 38px;font-weight: bold;padding-top: 2px;" id="result"></p>
+    		<p style="font-size: 38px;font-weight: bold;padding-top: 2px;" id="question"></p>
+
+
+    		<button onclick="check(1)" class="teststyle" id="option1"></button>
+    		<button onclick="check(2)" class="teststyle" id="option2"></button>
+    		<button onclick="check(3)" class="teststyle" id="option3"></button>
+    		<button onclick="check(4)" class="teststyle" id="option4"></button>
+    	</center><br>
+
+    	<center class="centerresult">
+    		<button id="start" class="teststyle" onclick="check(0)">Приступить к тесту</button>
+        		<script type="text/javascript">
+                document.write("<a id='end' style='display:none;' class='teststyle' href='testanimals.html'>Начать сначала</a>");
+            </script>
+    	</center><br><br>
+    	<center style="clear:both;"><br>
+    		<a href="tests.html" class="teststyle">Вернуться к тестам</a>
+    	</center>
+
+
+  </main>
+<footer class="footerdown">
+  <div class="wrapper">
+    <div class="social">
+      <a href="https://vk.com"><img src="vk.png" width="50px" height="50px" alt=""></a>
+      <a href="https://instagram.com"><img src="inst.png" width="50px" height="50px" alt=""></a>
+      <a href="https://mail.ru"><img src="mail.png" width="50px" height="50px" alt=""></a>
+      <a href="https://gmail.com"><img src="gmail.png" width="50px" height="50px" alt=""></a>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript">
+
+  //Массив вопросов и ответа
+  var data_array = [
+    ["Перевод слова: Monkey","Кенгуру","Собака","Овечка","Обезьяна",4],
+    ["Перевод слова: Kangaroo","Кот","Кенгуру","Обезьна","Рыба",2],
+    ["Перевод слова: Dog","Собака","Кошка","Акула","Носорог",1],
+    ["Перевод слова: Cow","Заяц","Волк","Корова","Собака",3],
+    ["Перевод слова: Pig","Дельфин","Собака","Свинья","Кенгуру",3],
+    ["Перевод слова: Rabbit","Кролик","Рыба","Коза","Змея",1],
+
+    ["Перевод слова: Cat","Кошка","Хомяк","Акула","Дельфин",1],
+    ["Перевод слова: Hamster","Овечка","Медведь","Хомяк","Тигр",3],
+    ["Перевод слова: Squirrel","Хомяк","Волк","Лиса","Белка",4],
+    ["Перевод слова: Rhino","Заяц","Носорог","Слон","Кошка",2],
+  ];
+
+  var plus = 0;
+  var t = 0;
+  var cur_answer = 0;/*Текущий вопрос/ответ */
+  var count_answer = data_array.length;/*Макс количество вопросов*/
+
+  function sec() {
+    t++;
+    document.getElementById('time').innerHTML='Затрачено времени: ' + t + ' сек';
+  }
+
+  function check(num){
+
+    if(num == 0){
+
+      document.getElementById('option1').style.display='block';/*Создаём блоки*/
+      document.getElementById('option2').style.display='block';
+      document.getElementById('option3').style.display='block';
+      document.getElementById('option4').style.display='block';
+      document.getElementById('question').style.display='block';
+
+      document.getElementById('option1').innerHTML=data_array[cur_answer][1];/*Присваиеваем блокам инфу с массива*/
+      document.getElementById('option2').innerHTML=data_array[cur_answer][2];
+      document.getElementById('option3').innerHTML=data_array[cur_answer][3];
+      document.getElementById('option4').innerHTML=data_array[cur_answer][4];
+      document.getElementById('question').innerHTML=data_array[cur_answer][0];
+
+      document.getElementById('start').style.display='none';/*При нажатии кнопки *Приступить к тесту* она исчезает*/
+      document.getElementById('end').style.display='inline';
+
+      var intervalID = setInterval(sec, 1000);/*При нажатии кнопки засекаем таймер*/
+
+    }else{
+
+      if( num ==  data_array[cur_answer][5]){
+        plus++;/*если выбранный ответ совпадает с правильным*/
+        document.getElementById('result').innerHTML='<span style="color:green">Верно!</span>';
+      }
+      else{
+        document.getElementById('result').innerHTML='<span style="color:red"> Неверно!</span>'+" Правильный ответ: " + '<span style="color:green">'+data_array[cur_answer][data_array[cur_answer][5]]+'</span>';
+      }
+
+      cur_answer++;/*Переход к след вопросу*/
+      if(cur_answer < count_answer){
+
+        document.getElementById('option1').innerHTML=data_array[cur_answer][1];
+        document.getElementById('option2').innerHTML=data_array[cur_answer][2];
+        document.getElementById('option3').innerHTML=data_array[cur_answer][3];
+        document.getElementById('option4').innerHTML=data_array[cur_answer][4];
+        document.getElementById('question').innerHTML=data_array[cur_answer][0];
+
+      }else{
+          /*Когда ответили на посл вопрос: блоки скрываем , выводим время*/
+        document.getElementById('time').id = 'stop';
+        document.getElementById('option1').style.display='none';
+        document.getElementById('option2').style.display='none';
+        document.getElementById('option3').style.display='none';
+        document.getElementById('option4').style.display='none';
+        document.getElementById('question').style.display='none';
+        document.getElementById('end').style.display='inline';
+
+        var percent =  Math.round(plus/count_answer*100);
+        var res = 'Плохо!';
+        if(percent<50) res = 'Старайся больше!';
+        if(percent>=50) res = 'Ты можешь лучше!';
+        if(percent>=70) res = 'Неплохо!';
+        if(percent>=80) res = 'Хорошо!';
+        if(percent==100) res = 'Отлично!';
+          /*выводи количество правильных ответов и процент */
+        document.getElementById('result').innerHTML='Правильных ответов: ' + plus + ' из ' + count_answer + ' (' + percent + '%)<br>' + res;
+      }
+    }
+  }
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
