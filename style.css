@@ -226,6 +226,11 @@ main .mainabout{
   margin-bottom: 30px;
 }
 .maintest p{
+  margin-top: 30px;
+  text-transform:uppercase;
+  margin-bottom: 50px;
+}
+.maintest span{
   text-transform:uppercase;
   margin-bottom: 50px;
 }
@@ -415,7 +420,7 @@ footer{
     left:12%;
   }
   .mainserv p{
-    color:gray;
+    color:black;
     margin-bottom: 100px;
     text-align: center;
     display: grid;
