@@ -482,7 +482,25 @@ footer{
     color: black;
     margin-bottom: 30px;
   }
-
+  /*адаптивность для кнопки*/
+  .topbutton {
+  width:40px;
+  border:2px solid #ccc;
+  background:#f7f7f7;
+  text-align:center;
+  padding:10px;
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  cursor:pointer;
+  color:#333;
+  font-family:verdana;
+  font-size:12px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  }
 }
 /*кнопка*/
 
