@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+      <script type="text/javascript">
+        $(function() {
+        $(window).scroll(function() {
+        if($(this).scrollTop() != 0) {
+        $('#toTop').fadeIn();
+        } else {
+        $('#toTop').fadeOut();
+        }
+        });
+        $('#toTop').click(function() {
+        $('body,html').animate({scrollTop:0},800);
+        });
+        });
+      </script>
+    <title>My Resume</title>
+  </head>
+  <body>
+    <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+    <header class="masthead">
+      <div class="logo">M</div>
+      <h2 class="site-title">it's my resume</h2>
+  </header>
+
+
+
+    <main id="content" class="main-area">
+
+      <div class="">
+        <img src="myself.jpg" alt="A man and a woman standing in the water of the Oslo fjord.">
+      </div>
+
+      <section class="splash grid">
+        <div class="splash-content">
+          <h2 class="content-title">Maksim Stefanenko</h2>
+          <div class="splash-text">
+            <p>
+              Phone number: +375293091076<br>
+              @mail: boss.canta@mail.ru
+            </p>
+            <p>From courses i want to get confident knowledge of the frontend, the goal is to become a cool developer)</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="buckets grid">
+        <ul>
+          <li>
+
+            <div class="bucket">
+              <h3 class="bucket-title">HTML</h3>
+              <p>Сonfident knowledge, worked on laboratory works at the university.</p>
+            </div><!-- .bucket -->
+          </li>
+          <li>
+
+            <div class="bucket">
+              <h3 class="bucket-title">CSS</h3>
+              <p>Confident knowledge, worked on laboratory works at the university.</p>
+              <p></p>
+            </div><!-- .bucket -->
+          </li>
+          <li>
+
+            <div class="bucket">
+              <h3 class="bucket-title">JavaScript</h3>
+              <p>Basics of language.</p>
+            </div><!-- .bucket -->
+          </li>
+        </ul>
+      </section><!-- .buckets -->
+
+      <section class="more grid">
+        <div class="more-content">
+          <h2 class="content-title">Experience</h2>
+          <p><a href="https://maksstef.github.io/">My first project</a><p>
+        </div><!-- .more-content -->
+      </section><!-- .more -->
+
+      <section class="twins grid">
+        <div class="twin">
+          <h2 class="content-title">Education</h2>
+          <p>Student of 2 course of the faculty of information technology (BSTU). Courses on codeacademy , sololearn , stepik.</p>
+        </div>
+        <div class="twin">
+          <h2 class="content-title">English</h2>
+          <p>A2 , practiced chatting in online games)</p>
+        </div>
+      </section><!-- .twins -->
+    </main>
+
+    <footer class="colophon grid">
+      <aside>mxmstfnk</aside>
+</footer>
+    <div id = "toTop" >Up </div>
+  </body>
+</html>
