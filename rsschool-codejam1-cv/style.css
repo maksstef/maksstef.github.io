@@ -1,38 +1,3 @@
-/* NOTE:
- * Grid/Flex layout stuff starts at line 187.
- * The stuff before is just boring old CSS to make content look not crappy.
- */
-
-
-/* button*/
-#toTop {
-width:60px;
-border:1px solid #ccc;
-background:#f7f7f7;
-text-align:center;
-padding:5px;
-position:fixed;
-bottom:20px; /* отступ кнопки от нижнего края страницы*/
-right:20px;
-cursor:pointer;
-display:none;
-color:#333;
-font-family:verdana;
-font-size:11px;
-z-index: 0;
-}
-
-#toTop:hover{
-  padding: 15px;
-  bottom:10px; /* отступ кнопки от нижнего края страницы*/
-  right:10px;
-  color: white;
-  background-color: black;
-}
-
-/*--------------------------------------------------------------
-CSS Reset
---------------------------------------------------------------*/
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
@@ -45,15 +10,15 @@ body {
 
 header{
   	background: #FFF6E5;
-    margin: 0;
+        margin: 0;
 }
 
 img {
 	display: block;
 	border: 0;
-  margin: 0;
+        margin: 0;
 	width: 50%;
-  margin-left: 25%;
+        margin-left: 25%;
 	height: auto;
 }
 .more-content p{
