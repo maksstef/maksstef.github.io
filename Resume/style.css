@@ -1,0 +1,109 @@
+@font-face {font-family:dcp;src: url('dcp.ttf');}
+
+*{margin: 0;
+  padding: 0;}
+
+body{
+  font-family: dcp;
+}
+
+.myself{
+  background-color:black;
+  color:white;
+  text-align:center;
+}
+
+.myself h1{
+  padding: 50px;
+}
+
+.aboutme{
+  padding: 70px 0 50px 50px;
+  margin-bottom: 140px;
+}
+
+.before_middle {
+  width: 20%;
+  margin-left: 20%;
+  text-align: left;
+  margin-right: 3%;
+  font-size: 20px;
+  padding: 0 100px 0 100px;
+  float: left;
+}
+.before_middle div{
+  padding-left: 50px;
+  padding-bottom: 20px;
+}
+
+.after_middle{
+  text-align: left;
+  font-size: 20px;
+}
+
+.after_middle div{
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.contacts{
+  font-size:20px;
+  text-align: center;
+}
+.contacts h2{
+  padding-bottom: 20px;
+}
+
+.contacts span{
+  padding: 0 5% 0 5%;
+}
+
+@media screen and (max-width:1010px){
+
+  .myself h1{
+    padding: 50px;
+  }
+
+  .aboutme{
+    padding: 70px 0 50px 0;
+    margin-bottom: 40px;
+  }
+
+  .before_middle {
+    width: 80%;
+    margin-left: 0;
+    text-align: center;
+    font-size: 20px;
+    padding: 0 40px 70px 40px;
+    float: left;
+  }
+  .before_middle div{
+    padding-left: 0;
+    padding-bottom: 20px;
+  }
+
+  .after_middle{
+    margin-left: 30%;
+    text-align: left;
+    font-size: 20px;
+  }
+
+  .after_middle div{
+    padding-left: 40px;
+    padding-bottom: 20px;
+  }
+
+  .contacts{
+    font-size:20px;
+    text-align: center;
+    padding: 0 0 40px 0;
+  }
+  .contacts h2{
+    padding-bottom: 20px;
+  }
+
+  .contacts span{
+    padding: 0 5% 20% 5%;
+  }
+
+}
