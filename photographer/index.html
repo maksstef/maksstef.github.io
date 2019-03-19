@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>EUKOLO</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jquery.bxslider.css">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery.bxslider.js"></script>
+
+  </head>
+  <body>
+
+<div class="headmain">
+
+  <div class="headmain_logo">
+    <a href="index.html">EK</a>
+  </div>
+
+  <div class="menu">
+      <div class="menu__icon">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="menu__links">
+          <a class="menu__links-item" href="#about">About</a>
+          <a class="menu__links-item" href="#gallery">Gallery</a>
+          <a class="menu__links-item" href="#works">Works</a>
+          <a class="menu__links-item" href="#contacts">Contacts</a>
+      </div>
+  </div>
+
+</div>
+
+    <main>
+
+    <div id="about" class="mainwelcome">
+      <h1 >
+         Hi, my name is Eugenia and i'm photographer.
+         On this web-site you can see my photos, projects and each other.
+      </h1>
+    </div>
+
+
+  <div id="works" class="mainthirtpage">
+    <div class="mainclients">
+      <div class="wrapper">
+      <h1>MY WORKS</h1>
+      <div class="line"></div>
+      <div class="clients">
+        <a href="project1.html"><img src="океан.jpg" height="270px" width="270px" alt=""></a>
+        <a href="project2.html"><img src="лес.jpg" height="270px" width="270px" alt=""></a>
+        <a href="project3.html"><img src="гора.jpg" height="270px" width="270px" alt=""></a>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div id="gallery" class="slider" class="mainsecpage">
+
+    <div>
+      <img src="pop1_n.jpg" alt="">
+    </div>
+    <div>
+      <img src="oop_n.jpg" alt="">
+    </div>
+    <div>
+      <img src="pop_n.jpg" alt="">
+    </div>
+    <div>
+      <img src="pop1_n.jpg" alt="">
+    </div>
+    <div>
+      <img src="oop_n.jpg" alt="">
+    </div>
+
+  </div>
+
+
+
+  <div id="contacts" class="mainforthpage">
+    <h1 class="sizeee">CONTACT WITH ME</h1>
+
+    <form action="index.html" method="POST">
+        <p>
+            <p><strong>Your name</strong>:</p>
+            <input type="text" name="name">
+        </p>
+
+        <p>
+            <p><strong>Your @mail</strong>:</p>
+            <input type="email" name="email">
+        </p>
+
+        <p>
+            <p><strong>Your message</strong>:</p>
+            <textarea name="message" ></textarea>
+        </p>
+
+
+        <p>
+            <button type="submit" name="do_signup">Send</button>
+        </p>
+    </form>
+  </div>
+
+    </main>
+
+    <footer>
+      <div class="myself">Content, layout, design: mxmstfnk.</div>
+      <div class="photodata">All photos: <a href="https://yandex.com" target="_blank" rel="nofollow">Yandex</a>.</div>
+    </footer>
+
+
+  <!-- <script src="script.js"></script>-->
+  </body>
+  <script>
+/*--------------------------------------------*/
+
+
+(function($){
+$(function() {
+  $('.menu__icon').on('click', function() {
+    $(this).closest('.menu')
+      .toggleClass('menu_state_open');
+  });
+
+  $('.menu__links-item').on('click', function() {
+    // do something
+
+    $(this).closest('.menu')
+      .removeClass('menu_state_open');
+  });
+});
+})(jQuery);
+
+
+var slides = document.querySelectorAll('#slides .slide');
+var currentSlide = 0;
+var slideInterval = setInterval(nextSlide,2000);
+
+function nextSlide(){
+  slides[currentSlide].className = 'slide';
+  currentSlide = (currentSlide+1)%slides.length;
+  slides[currentSlide].className = 'slide showing';
+}
+
+
+$(document).ready(function(){
+    $('.slider').bxSlider({
+      mode:'horizontal',/*fade*/
+      keyboardEnabled : false,
+    });
+  });
+  </script>
+</html>
